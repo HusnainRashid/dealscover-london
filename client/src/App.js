@@ -15,9 +15,13 @@ function App() {
         <title>London on a Budget</title>
       </head>
       <body>
-        <div class="landing-page">
-          <h1>London on a Budget</h1>
+        <h1 className="display-4">
+          thriftseekr<h4>LONDON</h4>
+        </h1>
+        <hr className="dashed"></hr>
+        <div className="landing-page">
           <Search />
+          <br></br>
           <IconsMenu />
           <EventsView />
         </div>
