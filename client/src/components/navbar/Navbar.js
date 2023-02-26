@@ -12,19 +12,17 @@ const Navbar = () => {
       window.location.href = "/login";
     };
       return (
-      <div align="right">
-          <a href="/login-page">
-          <button type="submit">
-            <i class="login">Login</i>
-          </button>
-        </a>
-        <a href="/signup-page">
-          <button type="submit">
-            <i class="signup">Signup</i>
-          </button>
-        </a>
-      </div>
-    );
+        <div>
+          <nav className="navbar bg-body-tertiary">
+            <div className="container-fluid">
+              <h1 className="display-4">
+                thriftseekr<h4>LONDON</h4>
+              </h1>
+              <form className="d-flex"></form>
+            </div>
+          </nav>
+        </div>
+      );
 };
 
 

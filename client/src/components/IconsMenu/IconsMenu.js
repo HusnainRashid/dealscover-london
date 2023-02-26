@@ -28,7 +28,7 @@ const IconsMenu = () => {
       </a>
 
       <a href="/food-and-drink">
-        <button type="submit" className="btn custom-outline">Food
+        <button type="submit" className="btn custom-outline">
           <DiningIcon />
          
         </button>
