@@ -1,6 +1,8 @@
-/* nav{
+nav{
   padding: 5px;
   padding-bottom: 0px;
+  color: black;
+
 }
 
 nav a{
@@ -13,4 +15,4 @@ button i{
 
 nav button{
   padding: 10px;
-} */
+}

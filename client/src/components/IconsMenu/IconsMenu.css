@@ -15,10 +15,8 @@
   color: #0c0c0d;
   background-color: #ededf348;
   border-color: #000409;
-  border-width: 3px;
+  border-width: 2px;
 }
-
-
 
 
 .custom-outline:not(:disabled):not(.disabled).active, 

@@ -17,7 +17,7 @@ function App() {
       <body>
         <Navbar />
         <div className="landing-page">
-          <Search />
+       
           <br></br>
           <IconsMenu />
           <EventsView />
