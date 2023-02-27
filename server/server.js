@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const axios = require('axios');
 const cors = require("cors");
 const debug = require("debug")("london_budget:server");
 const http = require("http");
@@ -20,24 +21,40 @@ db.once("open", function () {
   console.log("connected to database");
 });
 
-const userSchema = new mongoose.Schema({
+const eventSchema = new mongoose.Schema({
   name: String,
-  email: String,
-  age: Number,
 });
 
-const User = mongoose.model("User", userSchema);
+const Event = mongoose.model("Event", eventSchema);
 
-const newUser = new User({
-  name: "john doe",
-  email: "johndoe@email.com",
-  age: 33,
+app.get("/events", async (req,res) => {
+ try{
+  const response = await axios.get(
+    "https://app.ticketmaster.com/discovery/v2/events?apikey=7elxdku9GGG5k8j0Xm8KWdANDgecHMV0&locale=*&startDateTime=2023-03-10T22:04:00Z&page=11&city=london&countryCode=GB"
+  );
+
+  const events = response.data._embedded.events;
+
+  events.forEach(async (event) =>{
+    const newEvent = new Event({
+      name: event.name,
+    });
+
+    try {
+      await newEvent.save();
+      console.log(`saved event to the database: ${event.name}`);
+    } catch(err){
+      console.error(error)
+    }
+  });
+  res.status(200).send('success');
+} catch (error) {
+  console.error(error);
+  res.status(500).send('have a cuppa');
+}
+
 });
 
-newUser.save(function (err, user) {
-  if (err) return console.error(err);
-  console.log(user.name + " saved to the database.");
-});
 
 const server = http.createServer(app);
 server.listen(port);
