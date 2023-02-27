@@ -5,7 +5,8 @@ const debug = require("debug")("london_budget:server");
 const http = require("http");
 const app = express();
 const port = process.env.PORT || 8080;
-const mongoDbUrl = process.env.MONGODB_URL || "mongodb://0.0.0.0/london_budget";
+const mongoDbUrl =
+  process.env.MONGODB_URL || "mongodb://localhost/london_budget"; // consider changing the database if you don't want to interfere with the current user collection
 
 app.use(cors());
 
@@ -15,6 +16,28 @@ mongoose.connect(mongoDbUrl, {
 });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
+db.once("open", function () {
+  console.log("connected to database");
+});
+
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number,
+});
+
+const User = mongoose.model("User", userSchema);
+
+const newUser = new User({
+  name: "john doe",
+  email: "johndoe@email.com",
+  age: 33,
+});
+
+newUser.save(function (err, user) {
+  if (err) return console.error(err);
+  console.log(user.name + " saved to the database.");
+});
 
 const server = http.createServer(app);
 server.listen(port);
