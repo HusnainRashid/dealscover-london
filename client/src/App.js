@@ -1,31 +1,59 @@
-import React from 'react';
-import './App.css';
-import './index.css';
-import Search from './components/Search/Search';
-import EventsView from './components/EventsView/EventsView';
-import IconsMenu from './components/IconsMenu/IconsMenu';
-import Navbar from './components/navbar/Navbar';
-// import LoginForm from '../auth/LoginForm';
-import SignUpForm from './components/user/SignUpForm';
-
+import React from "react";
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import Home from "./components/home";
+import About from "./components/about";
+import Contact from "./components/contact";
 function App() {
   return (
-    <html>
-      <head>
-        <title>London on a Budget</title>
-      </head>
-      <body>
-        <Navbar />
-        <div className="landing-page">
-       
-          <br></br>
-          <IconsMenu />
-          <EventsView />
+    <>
+      <BrowserRouter>
+        <div
+          style={{
+            display: "flex",
+            background: "black",
+            padding: "5px 0 5px 5px",
+            fontSize: "20px",
+          }}
+        >
+          <div style={{ margin: "10px" }}>
+            <NavLink
+              to="/"
+              style={({ isActive }) => ({
+                color: isActive ? "greenyellow" : "white",
+              })}
+            >
+              Home
+            </NavLink>
+          </div>
+          <div style={{ margin: "10px" }}>
+            <NavLink
+              to="/about"
+              style={({ isActive }) => ({
+                color: isActive ? "greenyellow" : "white",
+              })}
+            >
+              About
+            </NavLink>
+          </div>
+          <div style={{ margin: "10px" }}>
+            <NavLink
+              to="/contact"
+              style={({ isActive }) => ({
+                color: isActive ? "greenyellow" : "white",
+              })}
+            >
+              Contact
+            </NavLink>
+          </div>
         </div>
-      </body>
-    </html>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
-
 
 export default App;
