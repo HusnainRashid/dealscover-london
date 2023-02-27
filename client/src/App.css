@@ -3,12 +3,17 @@ body{
 }
 .App {
   text-align: center;
+
 }
+/* .App-login-page{
+  text-align: center;
+} */
+
 .landing-page{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
 .App-logo {
   height: 40vmin;

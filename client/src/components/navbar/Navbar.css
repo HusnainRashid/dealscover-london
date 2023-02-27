@@ -1,4 +1,4 @@
-/* nav{
+nav{
   padding: 5px;
   padding-bottom: 0px;
 }
@@ -13,4 +13,13 @@ button i{
 
 nav button{
   padding: 10px;
+} 
+
+
+/* .btn-origin{
+  text-align: center;
+}
+
+.btn-right{
+  text-align: right;
 } */
