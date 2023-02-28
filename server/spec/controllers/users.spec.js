@@ -95,7 +95,7 @@ describe("/users", () => {
   test("does not find a user by email", async () => {
     await request(app).post("/users").send({
       email: "someone@example.com",
-      password: "1234",
+      password: "passwor",
       firstName: "firstName",
       lastName: "lastName",
     });
