@@ -15,6 +15,7 @@ describe("/users", () => {
         password: "password",
         firstName: "firstName",
         lastName: "lastName",
+        favourites: "event",
       });
       expect(response.statusCode).toBe(201);
     });
@@ -25,6 +26,7 @@ describe("/users", () => {
         password: "password",
         firstName: "firstName",
         lastName: "lastName",
+        favourites: "event",
       });
       let users = await User.find();
       let newUser = users[users.length - 1];
@@ -81,6 +83,7 @@ describe("/users", () => {
         password: "password",
         firstName: "firstName",
         lastName: "lastName",
+        favourites: "event",
       });
       let response = await request(app)
         .get("/users")
@@ -89,6 +92,8 @@ describe("/users", () => {
       expect(response.body.user.email).toEqual("someone@example.com");
       expect(response.body.user.firstName).toEqual("firstName");
       expect(response.body.user.lastName).toEqual("lastName");
+      expect(response.body.user.favourites).toEqual("favourites");
+
     });
   });
 
@@ -98,6 +103,7 @@ describe("/users", () => {
       password: "1234",
       firstName: "firstName",
       lastName: "lastName",
+      favourites: "event",
     });
     let response = await request(app)
       .get("/users")
