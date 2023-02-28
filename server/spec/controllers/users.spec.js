@@ -12,7 +12,7 @@ describe("/users", () => {
     test("the response code is 201", async () => {
       let response = await request(app).post("/users").send({
         email: "someone@example.com",
-        password: "1234",
+        password: "password",
         firstName: "firstName",
         lastName: "lastName",
       });
@@ -22,7 +22,7 @@ describe("/users", () => {
     test("a user is created", async () => {
       await request(app).post("/users").send({
         email: "someone@example.com",
-        password: "1234",
+        password: "password",
         firstName: "firstName",
         lastName: "lastName",
       });
@@ -89,6 +89,7 @@ describe("/users", () => {
       expect(response.body.user.email).toEqual("someone@example.com");
       expect(response.body.user.firstName).toEqual("firstName");
       expect(response.body.user.lastName).toEqual("lastName");
+      expect(response.body.user.favourites).toEqual("favourites");
     });
   });
 
