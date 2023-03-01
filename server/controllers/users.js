@@ -14,8 +14,8 @@ const UsersController = {
   },
 
   Find: async (req, res) => {
-    const email = req.query.email;
-    User.findOne({ email: email }, (err, user) => {
+    const id = req.body._id
+    User.findOneById({ id }, (err, user) => {
       if (err) {
         res.status(500).json({ message: "Error finding the right user" });
       } else if (!user) {
