@@ -25,6 +25,8 @@ const UsersController = {
         res.status(201).json({ user });
       }
     });
+
+    
   },
   // addToFavourite: async (req, res) => { 
   //   const favourite_event = Event.findById({_id: req.body._id}, async (err) => {

@@ -17,6 +17,7 @@ describe("User model", () => {
       password: "password",
       firstName: "firstName",
       lastName: "lastName",
+      favourites: "event",
     });
     expect(user.email).toEqual("someone@example.com");
   });
@@ -27,6 +28,7 @@ describe("User model", () => {
       password: "password",
       firstName: "firstName",
       lastName: "lastName",
+      favourites: "event",
     });
     expect(user.password).toEqual("password");
   });
@@ -45,6 +47,7 @@ describe("User model", () => {
       password: "password",
       firstName: "firstName",
       lastName: "lastName",
+      favourites: "event",
     });
 
     user.save((err) => {
@@ -58,6 +61,7 @@ describe("User model", () => {
           password: "password",
           firstName: "firstName",
           lastName: "lastName",
+          favourites: "event",
         });
         done();
       });

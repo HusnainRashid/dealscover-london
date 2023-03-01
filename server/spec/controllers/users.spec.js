@@ -92,7 +92,7 @@ describe("/users", () => {
       expect(response.body.user.email).toEqual("someone@example.com");
       expect(response.body.user.firstName).toEqual("firstName");
       expect(response.body.user.lastName).toEqual("lastName");
-      expect(response.body.user.favourites).toEqual("favourites");
+      expect(response.body.user.favourites).toEqual("event");
 
     });
   });
