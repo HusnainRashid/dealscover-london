@@ -2,6 +2,7 @@ const app = require("../../app");
 const request = require("supertest");
 require("../mongodb_helper");
 const User = require("../../models/user");
+const Event = require("../../models/event");
 
 describe("/users", () => {
   beforeEach(async () => {
@@ -28,7 +29,6 @@ describe("/users", () => {
         lastName: "lastName",
         favourites: "event",
       });
-      let users = await User.find();
       let newUser = users[users.length - 1];
       expect(newUser.email).toEqual("someone@example.com");
     });
@@ -112,23 +112,33 @@ describe("/users", () => {
   });
 });
 
-// describe("GET, a user by _id", () => {
-//   test("it finds a user", async () => {
-//     let response = await request(app)
-//     .post("/users")
-//     .send({
-//         email: "firstName@email.com",
-//         password: "1234",
-//         firstName: "firstName",
-//         lastName: "Allen",
-//         _id: 1234
-//     })
-//     expect(response.statusCode).toBe(201);
+describe("/events", () => {
+  // beforeEach(async () => {
+  //   await Event.deleteMany({});
+  // });
 
-//     let response2 = await request(app)
-//     .get("/users")
-//     .send({
-//       _id: 1234
-//     })
+  test("it finds an event", async () => {
+    // let response = await request(app)
+    await request(app).post("/events").send({
+        description: "football",
+        genre: "sports",
+        startDateTime: "Date",
+        postcode: "se10rt3",
+        _id: "63ff5e791e36baa4480599a",
+    })
+    
 
-//     expect(response.statusCode).toBe(201)
+    let response = await request(app)
+    .get("/events")
+    .query({
+      _id: "63ff5e791e36baa4480599a"});
+    expect(response.statusCode).toBe(201);
+    expect(response.body.event.description).toEqual("football");
+    expect(response.body.event.genre).toEqual("sports");
+    expect(response.body.event.startDateTime).toEqual("Date");
+    expect(response.body.event.postcode).toEqual("se10rt3");
+  })
+})
+// describe("GET, an event by _id", () => {
+
+// })
