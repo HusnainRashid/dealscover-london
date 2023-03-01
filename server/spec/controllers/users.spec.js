@@ -137,8 +137,8 @@ describe("/events", () => {
     expect(response.body.event.genre).toEqual("sports");
     expect(response.body.event.startDateTime).toEqual("Date");
     expect(response.body.event.postcode).toEqual("se10rt3");
-  })
-})
+  });
+});
 // describe("GET, an event by _id", () => {
 
 // })
