@@ -37,11 +37,11 @@ const UsersController = {
 
   //         const token = await TokenGenerator.jsonwebtoken(req.user_id)
   //         res.status(201).json({message: "event added to favourites", token: token, events: req.body.events})
-  //       }
+        }
   //     }
   //   });
   // }
-};
+
 
 
 //     try {

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 require("../mongodb_helper");
 const User = require("../../models/user");
+// const Event = require("../../models/event");
 
 describe("User model", () => {
   beforeEach((done) => {
@@ -62,4 +63,37 @@ describe("User model", () => {
       });
     });
   });
-});
+
+//   // // describe("Event model", () => {
+//   // //   beforeEach((done) => {
+//   // //     mongoose.connection.collections.events.drop(() => {
+//   // //       done();
+//   // //     });
+//   // //   });
+
+//   // // it("can save an event", (done) => {
+//   // //   const event = new Event({
+//   // //     genre: "sports",
+//   // //     URL: "URL",
+//   // //     startDateTime: "Date",
+//   // //     price: "100",
+//   // //   });
+
+//   // //   event.save((err) => {
+//   // //     expect(err).toBeNull();
+
+//   // //     Event.find((err, events) => {
+//   // //       expect(err).toBeNull();
+
+//   // //       expect(events[0]).toMatchObject({
+//   // //         genre: "sports",
+//   // //         URL: "URL",
+//   // //         startDateTime: "Date",
+//   // //         price: "100",
+//   // //       });
+//   // //       done();
+//   // //     });
+//   // //   });
+//   // });
+// });
+})

@@ -87,6 +87,5 @@ describe("Event model", () => {
        expect(event.legalAgeRestriction).toBeDefined();
        expect(event.legalAgeRestriction).toBeTruthy();
        expect(typeof event.legalAgeRestriction).toBe("boolean");
-     });
-
-});
+    });
+  })
