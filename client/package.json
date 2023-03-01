@@ -42,5 +42,8 @@
   "main": "index.js",
   "author": "",
   "license": "ISC",
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "devDependencies": {
+    "eslint-plugin-jsx-a11y": "^6.7.1"
+  }
 }
