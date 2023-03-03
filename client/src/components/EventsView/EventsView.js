@@ -19,11 +19,11 @@ const EventsView = () => {
       <ul>
         {events.map((event) =>(
           <li key={event._id}>{event.name}<br></br>
-            Type: {event.genre}<br></br>
+            Type: {event.genre}, {event.subgenre}<br></br>
             Minimum Price: {event.priceRange[0].min === 0 ? "Free" : `£${event.priceRange[0].min}`}<br></br>
             Postcode: {event.postCode}<br></br>
             <button>
-              <a href="https://{event.url}" target='_blank' rel='noreferrer'>Purchase a ticket</a>
+              <a href={`https://${event.url}`} target='_blank' rel='noreferrer'>Grab a ticket here!</a>
             </button>
           </li>
         ))}
