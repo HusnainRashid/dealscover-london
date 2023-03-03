@@ -45,21 +45,22 @@ const LogInForm = ({ navigate }) => {
               Additional Text to direct and prompt user to log back in to view
               and book tickets
             </p>
-          </div>
-          <div className="col-md-10 mx-auto col-lg-5">
-            <form
-              className="p-4 p-md-5 border rounded-3 bg-light"
-              onSubmit={handleSubmit}
-            > <div>
-            <p>New to Acebookers? Sign up here!</p>
+            <div>
+            <p>New to Dealscover London?</p>
             <div className="col-12">
               <a href="/signup">
-                <button className="w-100 btn btn-lg btn-dark" type="button">
+                <button className="w-100 btn btn btn-dark" type="button">
                   Sign up
                 </button>
               </a>
             </div>
           </div>
+          </div>
+          <div className="col-md-10 mx-auto col-lg-5">
+            <form
+              className="p-4 p-md-5 border rounded-3 bg-light"
+              onSubmit={handleSubmit}
+            > 
               <div className="form-floating mb-3">
                 <input
                   className="form-control"
