@@ -50,7 +50,16 @@ const LogInForm = ({ navigate }) => {
             <form
               className="p-4 p-md-5 border rounded-3 bg-light"
               onSubmit={handleSubmit}
-            >
+            > <div>
+            <p>New to Acebookers? Sign up here!</p>
+            <div className="col-12">
+              <a href="/signup">
+                <button className="btn btn-primary active" type="button">
+                  Sign up
+                </button>
+              </a>
+            </div>
+          </div>
               <div className="form-floating mb-3">
                 <input
                   className="form-control"
@@ -94,6 +103,7 @@ const LogInForm = ({ navigate }) => {
           </div>
         </div>
       </div>
+      
     );
 }
 
