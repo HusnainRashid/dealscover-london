@@ -7,16 +7,13 @@ import Navbar from "../navbar/Navbar"
 const Gallery = () => {
   return (
     <>
-    <Navbar />
+    <Navbar /><br></br>
     <body>
       <br></br>
-    <IconsMenu />
+    <IconsMenu /><br></br>
     <main>
       <div className="gallery">
-       
         <EventsView />
-
-        <img src="https://i.postimg.cc/BnMLZpWz/Rectangle-1.png" alt="" />
       </div>
     </main>
     </body>
