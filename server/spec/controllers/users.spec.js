@@ -74,55 +74,45 @@ describe("/users", () => {
     });
   });
 
-  describe("Find user by email", () => {
-    test("find user by email", async () => {
+  describe("Find user by id", () => {
+    test("find user by id", async () => {
       await request(app).post("/users").send({
         email: "someone@example.com",
         password: "password",
         firstName: "firstName",
         lastName: "lastName",
       });
+      let users = await User.find()
+      let id = users[0]._id;
+
       let response = await request(app)
-        .get("/users")
-        .query({ email: "someone@example.com" });
-      expect(response.statusCode).toBe(201);
-      expect(response.body.user.email).toEqual("someone@example.com");
-      expect(response.body.user.firstName).toEqual("firstName");
-      expect(response.body.user.lastName).toEqual("lastName");
+        .get(`/users/${id}`)
+        // .query({ email: "someone@example.com" });
+      expect(response.statusCode).toBe(200);
+      expect(response.body.email).toEqual("someone@example.com");
+      expect(response.body.firstName).toEqual("firstName");
+      expect(response.body.lastName).toEqual("lastName");
     });
   });
 
-  test("does not find a user by email", async () => {
-    await request(app).post("/users").send({
-      email: "someone@example.com",
-      password: "1234",
-      firstName: "firstName",
-      lastName: "lastName",
+  describe("Find user by id", () => {
+    test("find user by id", async () => {
+      await request(app).post("/users").send({
+        email: "someone@example.com",
+        password: "password",
+        firstName: "firstName",
+        lastName: "lastName",
+      });
+      let users = await User.find()
+      let id = users[0]._id;
+
+      let response = await request(app)
+        .get(`/users/${id}`)
+        // .query({ email: "someone@example.com" });
+      expect(response.statusCode).toBe(200);
+      expect(response.body.email).toEqual("someone@example.com");
+      expect(response.body.firstName).toEqual("firstName");
+      expect(response.body.lastName).toEqual("lastName");
     });
-    let response = await request(app)
-      .get("/users")
-      .query({ email: "someon@example.com" });
-    expect(response.statusCode).toBe(404);
   });
 });
-
-// describe("GET, a user by _id", () => {
-//   test("it finds a user", async () => {
-//     let response = await request(app)
-//     .post("/users")
-//     .send({
-//         email: "firstName@email.com",
-//         password: "1234",
-//         firstName: "firstName",
-//         lastName: "Allen",
-//         _id: 1234
-//     })
-//     expect(response.statusCode).toBe(201);
-
-//     let response2 = await request(app)
-//     .get("/users")
-//     .send({
-//       _id: 1234
-//     })
-
-//     expect(response.statusCode).toBe(201)

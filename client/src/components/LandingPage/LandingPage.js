@@ -6,7 +6,7 @@ import "./LandingPage.css";
 const LandingPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar /><br></br><br></br>
       <main>
         <div className="container py-4">
           <header className="pb-3 mb-4 border-bottom"></header>
@@ -23,7 +23,7 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <div className="row align-items-md-stretch"></div>
+          {/* <div className="row align-items-md-stretch"></div>
 
           <div className="row align-items-md-stretch">
             <div className="col-md-12">
@@ -64,7 +64,7 @@ const LandingPage = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <footer className="pt-3 mt-4 text-muted border-top"></footer>
         </div>
