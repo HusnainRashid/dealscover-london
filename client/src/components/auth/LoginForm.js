@@ -42,9 +42,8 @@ const LogInForm = ({ navigate }) => {
           <div className="col-lg-7 text-center text-lg-start">
             <h1 className="display-4 fw-bold lh-1 mb-3">Jump Back In</h1>
             <p className="col-lg-10 fs-4">
-              Additional Text to direct and prompt user to log back in to view
-              and book tickets
-            </p>
+              and see the great deals London has to offer...
+            </p><br></br><br></br>
             <div>
             <p>New to Dealscover London?</p>
             <div className="col-12">

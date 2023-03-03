@@ -55,7 +55,7 @@ const SignUpForm = ({ navigate }) => {
           <div className="col-lg-7 text-center text-lg-start">
             <h1 className="display-4 fw-bold lh-1 mb-3">Join Us!</h1>
             <p className="col-lg-10 fs-4">
-              Additional Text to direct and prompt user
+              Discover cheap live events that much your passions 
             </p>
           </div>
           <div className="col-md-10 mx-auto col-lg-5">
@@ -125,9 +125,9 @@ const SignUpForm = ({ navigate }) => {
               <hr className="my-4"></hr>
               <small className="text-muted">
                 By clicking Sign up, you agree to the terms of use.
-              </small>
+              </small><br></br><br></br>
               <div className="form-prompt">
-              <h4>Already have an account?</h4>
+              <p>Already have an account?</p>
               <div>
                 <a href="/login">
                   <button className="w-100 btn btn-lg btn-dark" type="button">
