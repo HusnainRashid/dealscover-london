@@ -1,4 +1,4 @@
-/* nav{
+nav{
   padding: 5px;
   padding-bottom: 0px;
 }
@@ -13,7 +13,7 @@ button i{
 
 nav button{
   padding: 10px;
-} */
+} 
 
 .navbar {
   display: flex;

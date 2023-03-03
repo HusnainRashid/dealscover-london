@@ -1,49 +1,78 @@
-// navbar on homepage : login and sign up button 
-
 import React from "react";
 import './Navbar.css';
+import {NavLink} from "react-router-dom"
 
-// const Navbar = () => {
-    // const [searchTerm, setSearchTerm] = useState('');
-    // const [searchResults, setSearchResults] = useState([]);
-
-    // const handleSignOut = () => {
-    //   window.localStorage.removeItem("token");
-    //   window.location.href = "/login";
-    // };
-//       return (
-//       <div align="right">
-//           <a href="/login-page">
-//           <button type="submit">
-//             <i class="login">Login</i>
-//           </button>
-//         </a>
-//         <a href="/signup-page">
-//           <button type="submit">
-//             <i class="signup">Signup</i>
-//           </button>
-//         </a>
-//       </div>
-//     );
-// };
-
-const Navbar = () => {
-  return (
-    <div className="navbar">
-      <a href="/login">
-        <button type="submit">
-          <i class="login">Login</i>
-        </button>
-      </a>
-      <a href="/signup">
-        <button type="submit">
-          <i class="signup">Signup</i>
-        </button>
-      </a>
-    </div>
-  );
+const handleLogOut = () => {
+  window.localStorage.removeItem("token");
+  window.location.href = "/login";
 };
 
 
+
+const Navbar = () => {
+  
+  const token = window.localStorage.getItem("token");
+
+  if (token) {
+    return (
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <NavLink className="navbar-brand" to="/">
+              Dealscover London
+            </NavLink>
+            <NavLink to="/gallery">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="events">
+                 View events
+              </button>
+            </NavLink>
+            <NavLink to="/login">
+              <button onClick={handleLogOut} className="btn btn-outline-secondary">
+                <i data-testid="logout" className="logout">
+                  Log out
+                </i>
+              </button>
+            </NavLink>
+          </div>
+        </nav>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="container-fluid">
+            <a className="navbar-brand" href="/">
+              Dealscover London
+            </a>
+            <NavLink to="/login">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="login">
+                 Log in
+              </button>
+            </NavLink>
+            <NavLink to="/gallery">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="events">
+                 View events
+              </button>
+            </NavLink>
+            <NavLink to="/signup">
+              <button type="submit" className="btn btn-outline-dark" data-testid="signup">Sign Up
+              </button>
+            </NavLink>
+          </div>
+        </nav>
+      </div>
+    );
+  }
+};
 
 export default Navbar;

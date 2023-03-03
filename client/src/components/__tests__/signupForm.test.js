@@ -1,5 +1,9 @@
-import {render, screen } from '@testing-library/react'
+import {render, screen, cleanup } from '@testing-library/react'
 import SignUpForm from '../user/SignUpForm'
+
+afterEach(() => {
+    cleanup();
+});
 
 test ('should render Signup email component', () => {
     render(<SignUpForm/>);

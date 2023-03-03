@@ -1,6 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, cleanup } from "@testing-library/react";
 import IconsMenu from "../IconsMenu/IconsMenu";
 
+afterEach(() => {
+    cleanup();
+});
 
 test ('should render IconsMenu music icon component', () => {
     render(<IconsMenu/>);

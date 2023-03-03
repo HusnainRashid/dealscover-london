@@ -1,0 +1,35 @@
+.icons-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-group button{
+  margin-right: 5px;
+}
+.btn-group{
+  padding-top: 4px;
+}
+.custom-outline {
+  color: #ebebeb;
+  background-color: transparent;
+  background-image: none;
+  border-color: #0000000e;
+}
+
+.custom-outline:hover {
+  color: #0c0c0d;
+  background-color: #ededf348;
+  border-color: #000409;
+  border-width: 2px;
+}
+
+
+.custom-outline:not(:disabled):not(.disabled).active, 
+.custom-outline:not(:disabled):not(.disabled):active, 
+.show > .custom-outline.dropdown-toggle {
+  color: #fff;
+  background-color: #c6cfd3;
+  border-color: #000409;
+}
