@@ -21,7 +21,14 @@ const Navbar = () => {
             <NavLink className="navbar-brand" to="/">
               Dealscover London
             </NavLink>
-           
+            <NavLink to="/gallery">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="events">
+                 View events
+              </button>
+            </NavLink>
             <NavLink to="/login">
               <button onClick={handleLogOut} className="btn btn-outline-secondary">
                 <i data-testid="logout" className="logout">
@@ -47,6 +54,14 @@ const Navbar = () => {
                 className="btn btn-outline-secondary"
                 data-testid="login">
                  Log in
+              </button>
+            </NavLink>
+            <NavLink to="/gallery">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="events">
+                 View events
               </button>
             </NavLink>
             <NavLink to="/signup">
