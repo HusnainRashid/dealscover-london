@@ -17,22 +17,20 @@ const EventsView = () => {
 
     return (
       <>
-        <Navbar />
         <div>
-          <h5>Events</h5>
-          <ul>
+          <div className="container">
             {events.map((event) =>(
-              <li key={event._id}>{event.name}<br></br>
-                Type: {event.genre}, {event.subgenre}<br></br>
-                Minimum Price: {event.priceRange[0].min === 0 ? "Free" : `£${event.priceRange[0].min}`}<br></br>
-                Postcode: {event.postCode}<br></br>
-                <button>
-                  <a href={`https://${event.url}`} target='_blank' rel='noreferrer'>Grab a ticket here!</a>
-                </button>
-              </li>
+              <div className="card text-bg-dark mb-3 p-3" key={event._id}>
+                <h5 className="card-header">{event.name}</h5>
+                <p>Type: {event.genre}, {event.subgenre}</p>
+                <p>Minimum Price: {event.priceRange[0].min === 0 ? "Free" : `£${event.priceRange[0].min}`}</p>
+                <p className="card-text">Postcode: {event.postCode}</p>
+                <a href={`https://${event.url}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
+                  Grab a ticket here!
+                </button></a>
+              </div>
             ))}
-          </ul>
-          <img src="https://i.postimg.cc/BnMLZpWz/Rectangle-1.png" alt="" />
+          </div>
         </div>
       </>
     );
