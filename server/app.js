@@ -8,6 +8,7 @@ const axios = require("axios");
 const tokensRouter = require("./routes/tokens");
 const usersRouter = require("./routes/users");
 const apiEventsRouter = require("./routes/api_events");
+const eventsRouter = require("./routes/events");
 
 const app = express();
 const cors = require("cors");
@@ -48,6 +49,7 @@ const tokenChecker = (req, res, next) => {
 app.use("/tokens", tokensRouter);
 app.use("/users", usersRouter);
 app.use("/api/events", apiEventsRouter);
+app.use("/events", eventsRouter);
 
 
 // catch 404 and forward to error handler
@@ -65,15 +67,15 @@ app.use((err, req, res) => {
   res.status(err.status || 500).json({ message: "server error" });
 });
 
-app.get("/events", async (req, res) =>{
-  try {
-    const events = await Event.find();
-    res.json(events);
-  }catch (error){
-    console.log(error);
-    res.status(500).send("Internal server error")
-  }
-})
+// app.get("/events", async (req, res) =>{
+//   try {
+//     const events = await Event.find();
+//     res.json(events);
+//   }catch (error){
+//     console.log(error);
+//     res.status(500).send("Internal server error")
+//   }
+// })
 
 
 module.exports = app;

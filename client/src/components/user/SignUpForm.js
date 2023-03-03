@@ -73,7 +73,7 @@ const SignUpForm = ({ navigate }) => {
                   className="form-control"
                   id="floatingInputEmail"
                 ></input>
-                <label for="floatingInputEmail">Email address</label>
+                <label htmlFor="floatingInputEmail">Email address</label>
               </div>
 
               <div className="form-floating mb-3">
@@ -89,7 +89,7 @@ const SignUpForm = ({ navigate }) => {
                   maxLength={20}
                   id="floatingInputPassword"
                 />
-                <label for="floatingInputPassword">Password</label>
+                <label htmlFor="floatingInputPassword">Password</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -103,7 +103,7 @@ const SignUpForm = ({ navigate }) => {
                   minLength={2}
                   id="floatingInputfirstName"
                 />
-                <label for="floatingInputfirstName">First Name</label>
+                <label htmlFor="floatingInputfirstName">First Name</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -117,7 +117,7 @@ const SignUpForm = ({ navigate }) => {
                   minLength={2}
                   id="floatingInputlastName"
                 />
-                <label for="floatingInputlastName">Last Name</label>
+                <label htmlFor="floatingInputlastName">Last Name</label>
               </div>
               <button className="w-100 btn btn-lg btn-dark" type="submit">
                 Sign up

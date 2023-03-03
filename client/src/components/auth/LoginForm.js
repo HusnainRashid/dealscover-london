@@ -62,7 +62,7 @@ const LogInForm = ({ navigate }) => {
                   id="floatingInputEmail"
                 />
 
-                <label for="floatingInputEmail">Email Address</label>
+                <label htmlFor="floatingInputEmail">Email Address</label>
               </div>
 
               <div className="form-floating mb-3">
@@ -77,7 +77,7 @@ const LogInForm = ({ navigate }) => {
                   minLength={8}
                   id="floatingInputPassword"
                 />
-                <label for="floatingInputPassword">Password</label>
+                <label htmlFor="floatingInputPassword">Password</label>
               </div>
               <button
                 className="w-100 btn btn-lg btn-dark"

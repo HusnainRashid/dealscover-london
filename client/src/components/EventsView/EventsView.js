@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-
-
 
 const EventsView = () => {
   const [events, setEvents] = useState([]);
 
-  useEffect(() =>{
-    axios.get("/events")
-    .then((response) =>{
-      setEvents(response.data);
-    })
-    .catch((error) =>{
-      console.log(error);
-    });
-  }, []);
+    useEffect(() => {
+
+      fetch("/events")
+      .then(response => response.json())
+      .then(async data => {
+        setEvents(data.events);
+      })
+    }, []);
+
   return (
     <div>
       <h5>Events</h5>
