@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ../server/bin/www",
     "start:test": "MONGODB_URL=mongodb://0.0.0.0/london_budget_test npm start",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "keywords": [
     "events",
