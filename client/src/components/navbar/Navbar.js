@@ -21,7 +21,6 @@ const Navbar = () => {
             <NavLink className="navbar-brand" to="/">
               Dealscover London
             </NavLink>
-           
             <NavLink to="/login">
               <button onClick={handleLogOut} className="btn btn-outline-secondary">
                 <i data-testid="logout" className="logout">

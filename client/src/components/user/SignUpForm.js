@@ -55,7 +55,7 @@ const SignUpForm = ({ navigate }) => {
           <div className="col-lg-7 text-center text-lg-start">
             <h1 className="display-4 fw-bold lh-1 mb-3">Join Us!</h1>
             <p className="col-lg-10 fs-4">
-              Additional Text to direct and prompt user
+              Discover cheap live events that much your passions 
             </p>
           </div>
           <div className="col-md-10 mx-auto col-lg-5">
@@ -73,7 +73,7 @@ const SignUpForm = ({ navigate }) => {
                   className="form-control"
                   id="floatingInputEmail"
                 ></input>
-                <label for="floatingInputEmail">Email address</label>
+                <label htmlFor="floatingInputEmail">Email address</label>
               </div>
 
               <div className="form-floating mb-3">
@@ -89,7 +89,7 @@ const SignUpForm = ({ navigate }) => {
                   maxLength={20}
                   id="floatingInputPassword"
                 />
-                <label for="floatingInputPassword">Password</label>
+                <label htmlFor="floatingInputPassword">Password</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -103,7 +103,7 @@ const SignUpForm = ({ navigate }) => {
                   minLength={2}
                   id="floatingInputfirstName"
                 />
-                <label for="floatingInputfirstName">First Name</label>
+                <label htmlFor="floatingInputfirstName">First Name</label>
               </div>
               <div className="form-floating mb-3">
                 <input
@@ -117,7 +117,7 @@ const SignUpForm = ({ navigate }) => {
                   minLength={2}
                   id="floatingInputlastName"
                 />
-                <label for="floatingInputlastName">Last Name</label>
+                <label htmlFor="floatingInputlastName">Last Name</label>
               </div>
               <button className="w-100 btn btn-lg btn-dark" type="submit">
                 Sign up
@@ -125,7 +125,17 @@ const SignUpForm = ({ navigate }) => {
               <hr className="my-4"></hr>
               <small className="text-muted">
                 By clicking Sign up, you agree to the terms of use.
-              </small>
+              </small><br></br><br></br>
+              <div className="form-prompt">
+              <p>Already have an account?</p>
+              <div>
+                <a href="/login">
+                  <button className="w-100 btn btn-lg btn-dark" type="button">
+                    Log in
+                  </button>
+                </a>
+              </div>
+            </div>
             </form>
           </div>
         </div>
