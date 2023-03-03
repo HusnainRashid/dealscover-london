@@ -49,6 +49,14 @@ const Navbar = () => {
                  Log in
               </button>
             </NavLink>
+            <NavLink to="/gallery">
+              <button
+                type="submit"
+                className="btn btn-outline-secondary"
+                data-testid="events">
+                 View events
+              </button>
+            </NavLink>
             <NavLink to="/signup">
               <button type="submit" className="btn btn-outline-dark" data-testid="signup">Sign Up
               </button>
