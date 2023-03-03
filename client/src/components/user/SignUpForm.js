@@ -126,6 +126,16 @@ const SignUpForm = ({ navigate }) => {
               <small className="text-muted">
                 By clicking Sign up, you agree to the terms of use.
               </small>
+              <div className="form-prompt">
+              <h4>Already have an account?</h4>
+              <div>
+                <a href="/login">
+                  <button className="w-100 btn btn-lg btn-dark" type="button">
+                    Log in
+                  </button>
+                </a>
+              </div>
+            </div>
             </form>
           </div>
         </div>

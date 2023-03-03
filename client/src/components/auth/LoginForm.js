@@ -54,7 +54,7 @@ const LogInForm = ({ navigate }) => {
             <p>New to Acebookers? Sign up here!</p>
             <div className="col-12">
               <a href="/signup">
-                <button className="btn btn-primary active" type="button">
+                <button className="w-100 btn btn-lg btn-dark" type="button">
                   Sign up
                 </button>
               </a>
