@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const EventsView = () => {
   const [events, setEvents] = useState([]);
@@ -17,7 +18,14 @@ const EventsView = () => {
       <h5>Events</h5>
       <ul>
         {events.map((event) =>(
-          <li key={event._id}>{event.name}</li>
+          <li key={event._id}>{event.name}<br></br>
+            Type: {event.genre}<br></br>
+            Minimum Price: {event.priceRange[0].min === 0 ? "Free" : `£${event.priceRange[0].min}`}<br></br>
+            Postcode: {event.postCode}<br></br>
+            <button>
+              <a href="https://{event.url}" target='_blank' rel='noreferrer'>Purchase a ticket</a>
+            </button>
+          </li>
         ))}
       </ul>
       <img src="https://i.postimg.cc/BnMLZpWz/Rectangle-1.png" alt="" />
