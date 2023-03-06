@@ -1,3 +1,4 @@
+import React from "react";
 import './Search.css'
 import { ReactComponent as SearchIcon } from "../../assets/icons/search_FILL0_wght100_GRAD-25_opsz48.svg";
 
