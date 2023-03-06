@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../navbar/Navbar";
 import "./SignUpForm.css";
 
 const SignUpForm = ({ navigate }) => {
@@ -49,48 +50,23 @@ const SignUpForm = ({ navigate }) => {
   };
 
   return (
-    <div>
+    <>
+    <Navbar />
+    <div className="background-image">
       <div className="container col-xl-10 col-xxl-8 px-4 py-5">
         <div className="row align-items-center g-lg-5 py-5">
-          <div className="col-lg-7 text-center text-lg-start">
+          <div className="col-lg-7 text-center text-lg-start text-white">
             <h1 className="display-4 fw-bold lh-1 mb-3">Join Us!</h1>
-            <p className="col-lg-10 fs-4">
-              Discover cheap live events that much your passions 
-            </p>
+            <p className="col-lg-10 fs-2" >
+              From music festivals to art exhibitions, theater performances to
+              food markets, we've got something for everyone.
+              </p>
           </div>
           <div className="col-md-10 mx-auto col-lg-5">
             <form
               className="p-4 p-md-5 border rounded-3 bg-light"
               onSubmit={handleSubmit}
             >
-              <div className="form-floating mb-3">
-                <input
-                  placeholder="Email"
-                  data-testid="email"
-                  type="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  className="form-control"
-                  id="floatingInputEmail"
-                ></input>
-                <label htmlFor="floatingInputEmail">Email address</label>
-              </div>
-
-              <div className="form-floating mb-3">
-                <input
-                  placeholder="Password"
-                  data-testid="password"
-                  type="password"
-                  value={password}
-                  onChange={handlePasswordChange}
-                  className="form-control"
-                  required
-                  minLength={8}
-                  maxLength={20}
-                  id="floatingInputPassword"
-                />
-                <label htmlFor="floatingInputPassword">Password</label>
-              </div>
               <div className="form-floating mb-3">
                 <input
                   placeholder="First Name"
@@ -119,28 +95,61 @@ const SignUpForm = ({ navigate }) => {
                 />
                 <label htmlFor="floatingInputlastName">Last Name</label>
               </div>
+
+              <div className="form-floating mb-3">
+                <input
+                  placeholder="Email"
+                  data-testid="email"
+                  type="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  className="form-control"
+                  id="floatingInputEmail"
+                ></input>
+                <label htmlFor="floatingInputEmail">Email address</label>
+              </div>
+
+              <div className="form-floating mb-3">
+                <input
+                  placeholder="Password"
+                  data-testid="password"
+                  type="password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  className="form-control"
+                  required
+                  minLength={8}
+                  maxLength={20}
+                  id="floatingInputPassword"
+                />
+                <label htmlFor="floatingInputPassword">Password</label>
+              </div>
+
               <button className="w-100 btn btn-lg btn-dark" type="submit">
                 Sign up
               </button>
               <hr className="my-4"></hr>
               <small className="text-muted">
                 By clicking Sign up, you agree to the terms of use.
-              </small><br></br><br></br>
+              </small>
+              <br></br>
+              <br></br>
               <div className="form-prompt">
-              <p>Already have an account?</p>
-              <div>
-                <a href="/login">
-                  <button className="w-100 btn btn-lg btn-dark" type="button">
-                    Log in
-                  </button>
-                </a>
+                <p>Already have an account?</p>
+                <div>
+                  <a href="/login">
+                    <button className="w-100 btn btn-lg btn-dark" type="button">
+                      Log in
+                    </button>
+                  </a>
+                </div>
               </div>
-            </div>
             </form>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 };
 

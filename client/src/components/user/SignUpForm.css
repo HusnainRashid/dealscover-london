@@ -4,3 +4,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.background-image{
+  background-image: url('https://i.postimg.cc/tgxctLF6/pexels-aleksandar-pasaric-2078071.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+}
+
+.fs-2 {
+  background-color: rgba(0,0,0,0.9);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

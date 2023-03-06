@@ -34,27 +34,29 @@ const Navbar = () => {
     );
   } else {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container-fluid">
-            <a className="navbar-brand" href="/">
-              Dealscover London
-            </a>
-            <NavLink to="/login">
-              <button
-                type="submit"
-                className="btn btn-outline-secondary"
-                data-testid="login">
-                 Log in
-              </button>
-            </NavLink>
-            <NavLink to="/signup">
-              <button type="submit" className="btn btn-outline-dark" data-testid="signup">Sign Up
-              </button>
-            </NavLink>
-          </div>
-        </nav>
+<div>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="container-fluid">
+      <a className="navbar-brand" href="/">
+        <img src="" alt="Dealscover London Logo" height="30" />
+        Dealscover London
+      </a>
+      <div className="navbar-button">
+        <NavLink to="/login">
+          <button type="submit" className="btn btn-outline-dark" data-testid="login">
+            Log in
+          </button>
+        </NavLink>
+        <NavLink to="/signup">
+          <button type="submit" className="btn btn-outline-dark" data-testid="signup">
+            Sign Up
+          </button>
+        </NavLink>
       </div>
+    </div>
+  </nav>
+</div>
+
     );
   }
 };

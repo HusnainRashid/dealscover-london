@@ -6,3 +6,35 @@
   input[type="range"]::-webkit-slider-runnable-track {
     background-color: rgb(209, 209, 209);
   }
+
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-btn {
+    margin-right: 10px;
+  }
+  
+  .search-input {
+    margin-right: 10px;
+    width: 150px;
+    height: 30px;
+  }
+
+  output {
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #7c7878;
+    color: #fff;
+    padding: 0.5rem;
+    padding-right: 10px;
+    border-radius: 0.25rem;
+  }
+
+  output::before {
+    content: "£";
+  }

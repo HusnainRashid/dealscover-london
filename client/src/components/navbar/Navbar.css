@@ -15,7 +15,7 @@ nav button{
   padding: 10px;
 } 
 
-.navbar {
+.navbar-buttons {
   display: flex;
   justify-content: flex-end;
 }
