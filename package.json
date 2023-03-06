@@ -1,0 +1,11 @@
+{
+  "name": "london_on_a_budget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}
