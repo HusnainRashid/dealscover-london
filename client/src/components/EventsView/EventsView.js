@@ -11,7 +11,7 @@ import { ReactComponent as ArenaIcon } from "../../assets/icons/stadium.svg";
 import { ReactComponent as FilmIcon } from "../../assets/icons/movie.svg";
 import { ReactComponent as SpaIcon } from "../../assets/icons/spa.svg";
 import { ReactComponent as AdultIcon } from "../../assets/icons/age18.svg";
-import { ReactComponent as TheatreIcon } from "../../assets/icons/theatres.svg";
+// import { ReactComponent as TheatreIcon } from "../../assets/icons/theatres.svg";
 
 const EventsView = () => {
   const [events, setEvents] = useState([]);
@@ -42,7 +42,7 @@ const EventsView = () => {
         <div className="btn-group">
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Music")}><MusicIcon />Music</button>
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Sport")}><SportsIcon />Sports</button>
-        <button className="btn btn-dark" onClick={() => handleCategoryClick("Theatre")}><TheatreIcon />Theatre</button>
+        {/* <button className="btn btn-dark" onClick={() => handleCategoryClick("Theatre")}><TheatreIcon />Theatre</button> */}
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Arts")}><ArtsIcon />Arts</button>
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Nightlife")}><NightIcon />Nightlife</button>
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Film")}><FilmIcon />Film</button>
