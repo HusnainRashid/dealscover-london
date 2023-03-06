@@ -7,7 +7,7 @@ const APIEventsController = {
   addEvents: async () => {
     try {
       const response = await axios.get(
-        "https://app.ticketmaster.com/discovery/v2/events?apikey={apikey}&locale=*&size=10&city=London&countryCode=GB"
+        `https://app.ticketmaster.com/discovery/v2/events?apikey=${apikey}&locale=*&size=10&city=London&countryCode=GB`
       );
 
       const events = response.data._embedded.events;
@@ -44,7 +44,7 @@ const APIEventsController = {
         apiEvent.lastIterated = new Date();
         await apiEvent.save();
         
-        const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events/${apiEvent.ticketMasterId}?apikey=rmiukm4AAeGFtQ2ptdf0HcMLRGLdOGnb&locale=*`);
+        const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events/${apiEvent.ticketMasterId}?apikey=${apikey}&locale=*`);
         
         const eventData = response.data;
         
