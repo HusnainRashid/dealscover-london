@@ -9,8 +9,6 @@ const Gallery = () => {
     <>
     <Navbar /><br></br>
     <body>
-      <br></br>
-    <IconsMenu /><br></br>
     <main>
       <div className="gallery">
         <EventsView />
