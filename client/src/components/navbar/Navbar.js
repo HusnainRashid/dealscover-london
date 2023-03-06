@@ -38,8 +38,7 @@ const Navbar = () => {
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
       <a className="navbar-brand" href="/">
-        <img src="" alt="Dealscover London Logo" height="30" />
-        Dealscover London
+        <img src="https://i.postimg.cc/cLkBxnsh/Dealscover-2.png" alt="Dealscover London Logo" height="30" />
       </a>
       <div className="navbar-button">
         <NavLink to="/login">
