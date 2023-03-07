@@ -1,23 +1,23 @@
 # Dealscover London
 
 
-# About The Project:
+## About The Project:
 
 Our aim is to make London accessible to everyone, regardless of their budget. We created a full stack application to filter events by specific categories such as sports, music, festivals, food, and much more. This makes it easier for our users to find events that cater to their interests and preferences. The event website for students, young people, and anyone who wants to experience London without breaking the bank.
 
 
-# Video Demonstration:
+## Video Demonstration:
 
 ## Tech Stack 
 
 
-## Backend
+### Backend
 | | |
 | ----------- | ----------- |
 | ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) | ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) |
 | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) | ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) |
 
-## Frontend
+### Frontend
 
 |  | |
 | ----------- | ----------- |
@@ -48,10 +48,14 @@ Dependencies Management:
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
 
-# Getting Started:
+## Getting Started:
 
 To work with the code, once you have cloned the repository:
 
+```terminal
+➜  london-on-a-budget git:(main) cd server 
+➜  server git:(main) JWT_SECRET=SUPER_SECRET npm start
+```
 
 ```terminal
 ➜  london-on-a-budget git:(main) cd client
