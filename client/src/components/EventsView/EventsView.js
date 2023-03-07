@@ -60,7 +60,7 @@ const EventsView = () => {
                 <p className="card-text">Postcode: {event.postCode}</p>
                 
                 <br />
-                <a href={`/events/${event._id}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
+                <a href={`/event/${event._id}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
                   View details
                 </button></a>
                 <br />
