@@ -21,9 +21,9 @@ const Navbar = () => {
             <NavLink className="navbar-brand" to="/">
               <img
                 src="https://i.postimg.cc/Dy0PKCcS/Dealscover.png"
-                alt=""
-                width="125"
-                height="125"
+                alt="logo"
+                width="100"
+                height="100"
               ></img>
             </NavLink>
             <NavLink to="/login">
@@ -45,9 +45,9 @@ const Navbar = () => {
             <a className="navbar-brand" href="/">
             <img
                 src="https://i.postimg.cc/Dy0PKCcS/Dealscover.png"
-                alt=""
-                width="125"
-                height="125"
+                alt="logo"
+                width="100"
+                height="100"
               ></img>
             </a>
             <NavLink to="/login">

@@ -8,10 +8,12 @@ import Search from "../Search/Search";
 const Gallery = () => {
   return (
     <>
-    <Navbar /><br></br><br></br>
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Navbar /><br></br><br></br><br></br><br></br><br></br>
+    </div>
     <body>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-    <Search />
+      <Search />
     </div>
      
     <main>
