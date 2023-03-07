@@ -8,14 +8,14 @@ import Search from "../Search/Search";
 const Gallery = () => {
   return (
     <>
-    <Navbar /><br></br>
+    <Navbar /><br></br><br></br>
     <body>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
     <Search />
     </div>
      
     <main>
-      <div className="gallery">
+      <div className="gallery"><br></br>
         <EventsView />
       </div>
     </main>
