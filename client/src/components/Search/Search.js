@@ -56,15 +56,15 @@ const Search = () => {
   };
   
   return (
-    <form onSubmit={handleSearch}>
-      <button className="btn btn-dark" type="button" onClick={handleLocationSearch}>
-        Use Location
-      </button>
-      <input type="date" data-testid="date" name="date" />
-      <input type="range" data-testid="pi_input" min="0" max="100" step="5" onChange={handleInputChange} />
-      <output id="value"></output>
-      <button type="submit" data-testid="search-btn" className="btn btn-dark">search</button>
-    </form>
+<form onSubmit={handleSearch} className="search-form">
+  <button className="btn btn-dark search-btn" type="button" onClick={handleLocationSearch}>
+    Use Location
+  </button>
+  <input type="date" data-testid="date" name="date" className="search-input" />
+  <input type="range" data-testid="pi_input" min="0" max="100" step="5" onChange={handleInputChange} className="search-input" />
+  <output id="value" style={{ marginLeft: "10px" }}></output>
+  <button type="submit" data-testid="search-btn" className="btn btn-dark search-btn">search</button>
+</form>
   );
 };
 

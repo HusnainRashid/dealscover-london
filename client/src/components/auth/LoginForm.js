@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Navbar from "../navbar/Navbar";
 
 const LogInForm = ({ navigate }) => {
   const [email, setEmail] = useState("");
@@ -37,13 +38,16 @@ const LogInForm = ({ navigate }) => {
   }
 
     return (
-      <div className="container col-xl-10 col-xxl-8 px-4 py-5">
+      <>
+      <Navbar/>
+      <div className="container col-xl-10 col-xxl-8 px-4 py-5" >
         <div className="row align-items-center g-lg-5 py-5">
           <div className="col-lg-7 text-center text-lg-start">
-            <h1 className="display-4 fw-bold lh-1 mb-3">Jump Back In</h1>
+            <h1 className="display-4 fw-bold lh-1 mb-3">Jump Back In!</h1>
             <p className="col-lg-10 fs-4">
-              and see the great deals London has to offer...
-            </p><br></br><br></br>
+              While you've been away we've been busy sourcing the best experiences London has to offer.
+              Take a look and start making unforgettable memories today.
+            </p>
             <div>
             <p>New to Dealscover London?</p>
             <div className="col-12">
@@ -103,7 +107,7 @@ const LogInForm = ({ navigate }) => {
           </div>
         </div>
       </div>
-      
+      </>
     );
 }
 
