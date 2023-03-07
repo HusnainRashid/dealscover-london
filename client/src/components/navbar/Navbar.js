@@ -19,7 +19,7 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">
-              Dealscover London
+              <img src="https://i.postimg.cc/cLkBxnsh/Dealscover-2.png" alt="Dealscover London Logo" height="30" />
             </NavLink>
             <NavLink to="/login">
               <button onClick={handleLogOut} className="btn btn-outline-secondary">
