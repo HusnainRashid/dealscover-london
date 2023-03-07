@@ -19,7 +19,12 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <NavLink className="navbar-brand" to="/">
-              Dealscover London
+              <img
+                src="https://i.postimg.cc/Dy0PKCcS/Dealscover.png"
+                alt=""
+                width="125"
+                height="125"
+              ></img>
             </NavLink>
             <NavLink to="/login">
               <button onClick={handleLogOut} className="btn btn-outline-secondary">
@@ -38,7 +43,12 @@ const Navbar = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="/">
-              Dealscover London
+            <img
+                src="https://i.postimg.cc/Dy0PKCcS/Dealscover.png"
+                alt=""
+                width="125"
+                height="125"
+              ></img>
             </a>
             <NavLink to="/login">
               <button
