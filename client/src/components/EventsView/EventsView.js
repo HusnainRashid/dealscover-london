@@ -49,7 +49,7 @@ const EventsView = () => {
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Retreats")}><SpaIcon />Retreats</button>
         <button className="btn btn-dark" onClick={() => handleCategoryClick("Family")}><FamilyIcon />Family</button>
       </div>
-      </div>
+      </div><br></br><br></br>
         <div>
           <div className="container">
             {filteredEvents.map((event) =>(
