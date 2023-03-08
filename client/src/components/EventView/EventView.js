@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
+import Navbar from "../navbar/Navbar";
+import "./EventView.css"
 
 const EventView = () => {
   const {id} = useParams()
@@ -15,6 +17,7 @@ const EventView = () => {
 
   return (
     <>
+    <Navbar/><br></br><br></br><br></br>
     <div className = "container">
       <div className="card text-bg-dark mb-3 p-3">
         <h1 className="card-header">{event.name}</h1><br></br>
@@ -30,7 +33,7 @@ const EventView = () => {
     </div>
 
     <div>
-      <a href="gallery"><button className="btn btn-dark">View all events</button></a>
+      <a href="/gallery"><button className="btn btn-dark">View all events</button></a>
     </div>
     </>
     

@@ -12,6 +12,7 @@ import { ReactComponent as FilmIcon } from "../../assets/icons/movie.svg";
 import { ReactComponent as SpaIcon } from "../../assets/icons/spa.svg";
 import { ReactComponent as AdultIcon } from "../../assets/icons/age18.svg";
 // import { ReactComponent as TheatreIcon } from "../../assets/icons/theatres.svg";
+import "./EventsView.css"
 
 const EventsView = () => {
   const [events, setEvents] = useState([]);
