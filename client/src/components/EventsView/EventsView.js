@@ -12,18 +12,16 @@ import { ReactComponent as FilmIcon } from "../../assets/icons/movie.svg";
 import { ReactComponent as SpaIcon } from "../../assets/icons/spa.svg";
 import { ReactComponent as AdultIcon } from "../../assets/icons/age18.svg";
 // import { ReactComponent as TheatreIcon } from "../../assets/icons/theatres.svg";
+import "./EventsView.css"
 
 const EventsView = () => {
   const [events, setEvents] = useState([]);
   const [selectedCategory, setCategory] = useState("");
-  const [token, setToken] = useState(window.localStorage.getItem("token"));
 
     useEffect(() => {
         fetch("/events")
         .then(response => response.json())
         .then(async data => {
-          window.localStorage.setItem("token", data.token);
-          setToken(window.localStorage.getItem("token"));
           setEvents(data.events);
         })
       }, []);
@@ -60,7 +58,7 @@ const EventsView = () => {
                 <p className="card-text">Postcode: {event.postCode}</p>
                 
                 <br />
-                <a href={`/events/${event._id}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
+                <a href={`/event/${event._id}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
                   View details
                 </button></a>
                 <br />
