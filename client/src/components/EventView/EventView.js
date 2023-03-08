@@ -14,18 +14,27 @@ const EventView = () => {
   }, [])
 
   return (
-    <div>
-      <h1>{event.name}</h1>
-      <h2>{event.description}</h2>
-      <h3>Genre: {event.genre}, {event.subgenre}</h3>
-      <h3>Accessibility: {event.accessibility}</h3>
-      <h3>Age restriction: {event.ageRestricted}</h3>
-      <h3>Address: {event.venueAddress}, {event.postCode}</h3> 
-      <a href={`https://${event.url}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
-                  Grab a ticket here!
-                </button></a>
-  
+    <>
+    <div className = "container">
+      <div className="card text-bg-dark mb-3 p-3">
+        <h1 className="card-header">{event.name}</h1><br></br>
+        <h3>{event.description}</h3><br></br>
+        <h4>Genre: {event.genre}, {event.subgenre}</h4><br></br>
+        <h4>Accessibility: {event.accessibility}</h4><br></br>
+        <h4>Age restriction: {event.ageRestricted}</h4><br></br>
+        <h4 className="card-text">Address: {event.venueAddress}, {event.postCode}, London</h4><br></br>
+        <a href={`https://${event.url}`} target='_blank' rel='noreferrer'><button className="btn btn-light">
+                    Grab a ticket here!
+                  </button></a>
+      </div>
     </div>
+
+    <div>
+      <a href="gallery"><button className="btn btn-dark">View all events</button></a>
+    </div>
+    </>
+    
+    
   );
 };
 
