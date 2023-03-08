@@ -17,14 +17,11 @@ import "./EventsView.css"
 const EventsView = () => {
   const [events, setEvents] = useState([]);
   const [selectedCategory, setCategory] = useState("");
-  const [token, setToken] = useState(window.localStorage.getItem("token"));
 
     useEffect(() => {
         fetch("/events")
         .then(response => response.json())
         .then(async data => {
-          window.localStorage.setItem("token", data.token);
-          setToken(window.localStorage.getItem("token"));
           setEvents(data.events);
         })
       }, []);
