@@ -11,7 +11,7 @@ const Gallery = () => {
     <Navbar /><br></br><br></br>
     <body>
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-    <Search />
+  
     </div>
      
     <main>
