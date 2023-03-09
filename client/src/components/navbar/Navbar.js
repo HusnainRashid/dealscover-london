@@ -23,9 +23,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink to="/login">
               <button onClick={handleLogOut} className="btn btn-outline-secondary">
-                <i data-testid="logout" className="logout">
-                  Log out
-                </i>
+              <i class="bi bi-box-arrow-right"></i>Log out
               </button>
             </NavLink>
           </div>
@@ -43,12 +41,12 @@ const Navbar = () => {
       <div className="navbar-button">
         <NavLink to="/login">
           <button type="submit" className="btn btn-outline-dark" data-testid="login">
-            Log in
+          <i class="bi bi-box-arrow-in-left"></i>Log in
           </button>
         </NavLink>
         <NavLink to="/signup">
           <button type="submit" className="btn btn-outline-dark" data-testid="signup">
-            Sign Up
+          <i class="bi bi-pen-fill"></i>Sign Up
           </button>
         </NavLink>
       </div>
