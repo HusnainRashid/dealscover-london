@@ -60,10 +60,10 @@ const EventsView = () => {
         <h1 className="display-4 mx-auto">Events</h1>
       </div>
 
-      
-      <span class="badge text-bg-light"><h5>Price Filter</h5></span>
+      <div className="text-center">
          <div className="btn-group price" role="price" aria-label="Basic radio toggle button group">
          
+         <button type="button" class="btn btn-secondary text-white">Price Filter</button>
 
           <input type="radio" className="btn-check" onClick={() => handleMaxPriceClick(1000)} name="btnradioprice" id="btnradio1" autocomplete="off" />
           <label className="btn btn-dark" for="btnradio1">Off</label>
@@ -100,6 +100,7 @@ const EventsView = () => {
 
            <input type="radio" className="btn-check" onClick={() => handleMaxPriceClick(100)} name="btnradioprice" id="btnradio12" autocomplete="off" />
            <label className="btn btn-dark" for="btnradio12">£100</label>
+      </div>
       </div>
       </div>
 
